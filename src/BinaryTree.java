@@ -21,6 +21,7 @@ public class BinaryTree {
 			System.out.println("Set head");
 		}
 		else{
+			//Change
 			// Run search first
 			
 			if (searchTree(numToAdd, root)){
