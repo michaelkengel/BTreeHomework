@@ -18,10 +18,13 @@ public class Driver {
 		Tree.addNode(41);
 		System.out.println("Added all nodes \n");
 		
+		System.out.println("In Order:");
 		Tree.inOrderTraversal(Tree.root);
 		System.out.println("\n");
+		System.out.println("Post Order:");
 		Tree.postOrderTraversal(Tree.root);
 		System.out.println("\n");
+		System.out.println("Pre Order");
 		Tree.preOrderTraversal(Tree.root);
 	}
 }

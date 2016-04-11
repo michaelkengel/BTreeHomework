@@ -8,13 +8,13 @@ public class BinaryTree {
 		root = null;
 		numOfNodes = 0;
 	}
-	
+
 	// Add node method
 	public boolean addNode(int numToAdd){
-		
+
 		Node newNodeToAdd = new Node();
 		newNodeToAdd.setData(numToAdd);
-		
+
 		if (root == null){
 			root = newNodeToAdd;
 			numOfNodes++;
@@ -23,15 +23,15 @@ public class BinaryTree {
 		else{
 			//Change
 			// Run search first
-			
+
 			if (searchTree(numToAdd, root)){
 				System.out.println("Already in tree");
 				return false;
 			}
-			
+
 			Node walker = new Node();
 			walker = root;
-	
+
 			while (walker != null){
 				if (numToAdd > walker.getData()){
 					if (walker.getRightChild() == null){
@@ -73,7 +73,6 @@ public class BinaryTree {
 		}
 	}
 
-	
 	public void inOrderTraversal(Node n){
 		// This method will visit left node, node, then right node
 		if (n == null){
@@ -83,17 +82,17 @@ public class BinaryTree {
 		System.out.println(n.getData());
 		inOrderTraversal(n.getRightChild());	
 	}
-	
+
 	public void postOrderTraversal(Node n){
 		// This method will visit the children before the node
 		if (n == null){
 			return;
 		}
-		inOrderTraversal(n.getLeftChild());
-		inOrderTraversal(n.getRightChild());
+		postOrderTraversal(n.getLeftChild());
+		postOrderTraversal(n.getRightChild());
 		System.out.println(n.getData());
 	}
-	
+
 	public void preOrderTraversal(Node n){
 		// This method will print root, then left tree followed by right 
 		// Left to right
@@ -101,10 +100,7 @@ public class BinaryTree {
 			return;
 		}
 		System.out.println(n.getData());
-		inOrderTraversal(n.getLeftChild());
-		inOrderTraversal(n.getRightChild());
+		preOrderTraversal(n.getLeftChild());
+		preOrderTraversal(n.getRightChild());
 	}
-	
-	
-		
 }
