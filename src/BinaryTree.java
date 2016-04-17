@@ -2,7 +2,7 @@ public class BinaryTree {
 
 	Node root;
 	int numOfNodes;
-
+	
 	// Instantiate
 	public BinaryTree(){
 		root = null;
@@ -95,7 +95,6 @@ public class BinaryTree {
 
 	public void preOrderTraversal(Node n){
 		// This method will print root, then left tree followed by right 
-		// Left to right
 		if (n == null){
 			return;
 		}
